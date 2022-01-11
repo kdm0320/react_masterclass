@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useState } from "react";
 import styled from "styled-components";
 
 interface ContainerProps {
@@ -22,6 +22,10 @@ interface CircleProps {
 }
 
 function Circle({ bgColor, borderColor, text = "default" }: CircleProps) {
+  //   userstate의 value가 여러 타입값을 가지게 하는 방법
+  //   const [value, setValue] = useState<number | string>(0);
+  //   setValue(2);
+  //   setValue("hello");
   return (
     <Container bgColor={bgColor} borderColor={borderColor ?? bgColor}>
       {text}
