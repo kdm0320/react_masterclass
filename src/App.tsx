@@ -14,12 +14,13 @@ function App() {
         </Route>
         <Route path="/search">
           <Search />
-          <Route path="/">
-            <Home />
-          </Route>
+        </Route>
+        <Route path={["/", "/movies/:movieId"]}>
+          <Home />
         </Route>
       </Switch>
     </Router>
   );
 }
+
 export default App;
