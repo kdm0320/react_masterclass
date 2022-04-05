@@ -11,4 +11,6 @@ export const theme: DefaultTheme = {
     lighter: "#fff",
     darker: "#e5e5e5",
   },
+  cardColor: "white",
+  boardColor: "#E5E8EE",
 };

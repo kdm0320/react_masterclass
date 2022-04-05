@@ -62,9 +62,9 @@ table {
 body {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
-  color:${(props) => props.theme.white.darker};
+  color:${(props) => props.theme.black.darker};
   line-height: 1.2;
-  background-color: black;
+  background-color: #4D98FF;
 }
 a {
   text-decoration:none;
@@ -72,17 +72,13 @@ a {
 }
 `;
 
-const client = new QueryClient();
-
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <QueryClientProvider client={client}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <App />
-        </ThemeProvider>
-      </QueryClientProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
